@@ -339,7 +339,7 @@ footer{
         align-items: center;
     }
     .input{
-        display: flex;
+        display: block;
     }
     .input .input-div input{
         padding: 10px;
