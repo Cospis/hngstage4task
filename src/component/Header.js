@@ -4,12 +4,17 @@ import Popup from "./Popup";
 import arrow from "../component/img/arrow.png";
 import metamusk from "../component/img/metamusk.png";
 import Walletconnect from "../component/img/walletconnect.png";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Menu from "./Menu";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [menuisOpen, setmenuIsOpen] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
+  };
+  const togglemenuPopup = () => {
+    setmenuIsOpen(!menuisOpen);
   };
   return (
     <body>
@@ -37,7 +42,35 @@ const Header = () => {
             Connect wallets
           </button>
           <div className="menu">
-            <AiOutlineMenu size={25} />
+            {!menuisOpen && (
+              <AiOutlineMenu size={25} onClick={togglemenuPopup} />
+            )}
+            {menuisOpen && (
+              <AiOutlineClose size={25} onClick={togglemenuPopup} />
+            )}
+
+            {menuisOpen && (
+              <Menu
+                content={
+                  <>
+                    <nav>
+                      <ul>
+                        <li>
+                          {" "}
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <a href="/place">Place to stay</a>
+                        </li>
+                        <li> NFTs</li>
+                        <li> Community</li>
+                      </ul>
+                    </nav>
+                  </>
+                }
+                handleClose={togglemenuPopup}
+              />
+            )}
           </div>
         </div>
       </header>
