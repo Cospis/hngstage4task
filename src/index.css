@@ -319,7 +319,9 @@ footer{
     border-radius: 7px;
     color: #fff;
 }
-
+.menu{
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
      header, nav {
@@ -376,7 +378,7 @@ footer{
         align-items: center;
     }
     header nav{
-        display: flex;
+        display: none;
         /* justify-content: space-between; */
         align-items: center;
         
@@ -418,5 +420,13 @@ footer{
         background-color: #A02279;
         padding: 5px;
          margin-top: 70px;
+    }
+    .view{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu{
+        display: flex;
     }
 }

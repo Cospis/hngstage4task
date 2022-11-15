@@ -4,6 +4,7 @@ import Popup from "./Popup";
 import arrow from "../component/img/arrow.png";
 import metamusk from "../component/img/metamusk.png";
 import Walletconnect from "../component/img/walletconnect.png";
+import { AiOutlineMenu } from "react-icons/ai";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,10 +31,15 @@ const Header = () => {
             <li> Community</li>
           </ul>
         </nav>
-        <button onClick={togglePopup} id="connect">
-          {" "}
-          Connect wallets
-        </button>
+        <div className="view">
+          <button onClick={togglePopup} id="connect">
+            {" "}
+            Connect wallets
+          </button>
+          <div className="menu">
+            <AiOutlineMenu size={25} />
+          </div>
+        </div>
       </header>
       {isOpen && (
         <Popup
