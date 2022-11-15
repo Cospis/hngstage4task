@@ -339,7 +339,7 @@ footer{
         align-items: center;
     }
     .input{
-        display: block;
+        display: flex;
     }
     .input .input-div input{
         padding: 10px;
@@ -428,5 +428,7 @@ footer{
     }
     .menu{
         display: flex;
+        position: relative;
+        right: 30px;
     }
 }
