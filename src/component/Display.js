@@ -16,7 +16,7 @@ const Display = () => {
         <div className='style-h1'> <h1> Inspiration for your next adventure</h1></div>
         <div className='img-div'> 
             <div className='box-mage'>
-                <div className='img'><img className='img1' src={displayimg1} alt="" /></div>
+                <div className='img'><img className='img' src={displayimg1} alt="" /></div>
                 <div className='write-up'>
                     <h3> Desert King <br /> 2345km away</h3>
                     <h3> 1MBT PER night <br /> available 2weeks stay </h3>

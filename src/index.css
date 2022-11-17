@@ -432,11 +432,18 @@ footer{
         position: absolute;
         right: 50px;
         top: 20px;
+        /* background-color: green; */
     }
     .menu-box nav{
         display: block;
     }
    nav ul{
         display: block;
+    }
+    button#connect{
+width: 80px;
+    }
+    .box-mage{
+            width: 300px;
     }
 }
